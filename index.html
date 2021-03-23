@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Формы</title>
+    </head>
+    <body>
+<p> <font color="red">	
+<?php
+if (!isset($_SESSION['mes'])) {
+  $_SESSION['mes'] = "";
+} else {
+echo $_SESSION['mes'];
+}
+?>
+</font>
+</p>
+        <h1>Пожалуйста, заполните форму:</h1>
+
+        <form action="check.php" method="post">
+            Имя:<input type="text" name="_name"></label><br><br>
+			Фамилия:<input type="text" name="_surname"></label><br><br>
+			Пол:<input type="radio" name="_sex" value="m" checked> М
+            <input type="radio" name="_sex" value="f"> Ж<br><br>
+			Телефон:<input type="text" name="_tel"><br><br>
+			E-mail: <input type="text" name="_email"><br><br>
+			Дата рождения:<input type="date" name="_bd"><br><br>
+			<input type="submit">
+        </form>
+    </body>
+</html>
